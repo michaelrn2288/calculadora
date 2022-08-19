@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(17, 86, 102);
+  --primary-color-darker: rgb(9, 48, 56);
+  --secondary-color: rgb(200,200,200);
+  --secondary-color-darker: rgb(100, 100, 100);
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+  border: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open sans', sans-serif;
+  font-size: 1.3em;
+  line-height: 1.5em;
+}
+
+h1 {
+  text-align: center;
+  display: block;
+  grid-column: 1 / span 4;
+}
+
+.calculator {
+  width: 450px;
+  height: 400px;
+  margin: 50px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.75fr 1.75fr 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 5px;
+  row-gap: 5px;
+}
+
+input.display {
+  border: 2px solid var(--secondary-color);
+  grid-column: 1 / 4 span;
+  font-size: 1.5em;
+  text-align: right;
+}
+
+form input:focus {
+  outline: 1px solid var(--primary-color);
+}
+
+button {
+  cursor: pointer;
+  background: linear-gradient(to bottom, var(--secondary-color), white, var(--secondary-color));
+  box-shadow: 2px 2px var(--secondary-color-darker);
+  font-size: 1em;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, var(--secondary-color-darker), var(--secondary-color), var(--secondary-color-darker))
+}
